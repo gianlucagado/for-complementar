@@ -9,14 +9,14 @@
     //Entrada
     let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
 
-    const questao = prompt(`Fale quais destas bebidas têm álcool: Cerveja, Vinho, Suco Natural, Tequila, Água, Refrigerante e Vodka.`);
+    const questao = prompt(`Fale quais destas bebidas têm álcool: ${bebidas}`).toLowerCase();
 
     //Processamento
-    let alcool = [];
+    
     let sem = [];
 
     for(let item of bebidas){
-        if(item == questao){
+        if(item.toLowerCase() == questao || item == "Cerveja" || item == "Tequila" || item == "Vinho" || item == "Vodka" ){
             alcool.push(item);
         }
         else{
@@ -24,5 +24,6 @@
         }
     }
     //Saída
-    document.write(`A lista de bebidas permitidas para menores de 18 anos é: ${sem.join(", ")}.`);
+    document.write(`A lista de bebidas permitidas para menores de 18 anos é ${sem.join(" - ")}.`);
+    
 </script>
