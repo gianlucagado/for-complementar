@@ -11,20 +11,37 @@
 
     let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
 
-    let RS = [];
-    let SC = [];
-    let PR = [];
+    let rs = [];
+    let sc = [];
+    let pr = [];
 
 
 
     for(let cidade of cidades){
-        let estado = prompt(`Qual estado essa cidade pertence ${cidade}`)
-
-
+        let estado = prompt(`Qual estado essa cidade pertence ${cidade}`).toLowerCase()
         
+        if (estado === "rs") {
+            rs.push(cidade)
+        } else if (estado === "sc") {
+            sc.push(cidade)
+        } else if (estado === "pr") {
+            pr.push(cidade)
+        } else {
+            alert(`invalido`)
+        }
     }
 
+    let tudo = [`Rio: ${rs}` ,`SC: ${sc}` , `PR: ${pr}`]
+     
 
+    for(let nefocio of tudo){
+      
+         tudo.sort((a, b) => a - b).length
+
+        document.write(`${nefocio} <br>`)
+    }
+
+ //  document.write(`${tudo} <br> SANTA CATARINA: ${tudo} <br> PARANA: ${tudo}`)
     //Processamento
 
 
