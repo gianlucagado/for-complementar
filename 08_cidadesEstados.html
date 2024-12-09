@@ -33,14 +33,17 @@
 
     let tudo = [`Rio: ${rs}` ,`SC: ${sc}` , `PR: ${pr}`]
      
+let categoria = []
 
     for(let nefocio of tudo){
       
          tudo.sort((a, b) => a - b).length
 
         document.write(`${nefocio} <br>`)
-    }
 
+        categoria.push(nefocio)
+    }
+   document.write(categoria.length)
  //  document.write(`${tudo} <br> SANTA CATARINA: ${tudo} <br> PARANA: ${tudo}`)
     //Processamento
 
